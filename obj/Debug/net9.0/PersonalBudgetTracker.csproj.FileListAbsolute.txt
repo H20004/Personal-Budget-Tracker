@@ -1,0 +1,14 @@
+C:\Users\hirad\PersonalBudgetTracker\bin\Debug\net9.0\PersonalBudgetTracker.exe
+C:\Users\hirad\PersonalBudgetTracker\bin\Debug\net9.0\PersonalBudgetTracker.deps.json
+C:\Users\hirad\PersonalBudgetTracker\bin\Debug\net9.0\PersonalBudgetTracker.runtimeconfig.json
+C:\Users\hirad\PersonalBudgetTracker\bin\Debug\net9.0\PersonalBudgetTracker.dll
+C:\Users\hirad\PersonalBudgetTracker\bin\Debug\net9.0\PersonalBudgetTracker.pdb
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.AssemblyInfoInputs.cache
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.AssemblyInfo.cs
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.csproj.CoreCompileInputs.cache
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.dll
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\refint\PersonalBudgetTracker.dll
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.pdb
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.genruntimeconfig.cache
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\ref\PersonalBudgetTracker.dll
