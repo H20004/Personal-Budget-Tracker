@@ -15,19 +15,30 @@ public class BudgetManager
     }
 
     // Show all transactions
-    public void ShowAll()
+   public void ShowAll()
+{
+    if (transactions.Count == 0)
     {
-        if (transactions.Count == 0)
+        Console.WriteLine("Inga transaktioner ännu.");
+        return;
+    }
+
+    for (int i = 0; i < transactions.Count; i++)
+    {
+        if (transactions[i].Amount >= 0)
         {
-            Console.WriteLine("No transactions found.");
-            return;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
         }
 
-        foreach (var transaction in transactions)
-        {
-            transaction.ShowInfo();
-        }
+        Console.Write($"{i + 1}. ");
+        transactions[i].ShowInfo();
+        Console.ResetColor();
     }
+}
 
     // Calculate total balance
     public decimal CalculateBalance()
