@@ -12,3 +12,4 @@ C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\refint\PersonalBudgetTrack
 C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.pdb
 C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.genruntimeconfig.cache
 C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\ref\PersonalBudgetTracker.dll
+C:\Users\hirad\PersonalBudgetTracker\obj\Debug\net9.0\PersonalBudgetTracker.sourcelink.json
