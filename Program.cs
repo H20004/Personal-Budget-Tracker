@@ -9,16 +9,13 @@ class Program
 
         while (running)
         {
-            Console.WriteLine("\n==================================");
-            Console.WriteLine("      PERSONAL BUDGET TRACKER     ");
-            Console.WriteLine("==================================");
+            Console.WriteLine("\n=== Personal Budget Tracker ===");
             Console.WriteLine("1. Lägg till transaktion");
             Console.WriteLine("2. Visa alla transaktioner");
             Console.WriteLine("3. Visa total balans");
             Console.WriteLine("4. Ta bort transaktion");
-            Console.WriteLine("5. Avsluta programmet");
-            Console.WriteLine("----------------------------------");
-            Console.Write("Välj ett alternativ (1-5): ");
+            Console.WriteLine("5. Avsluta");
+            Console.Write("Välj ett alternativ: ");
 
             string choice = Console.ReadLine();
 
@@ -30,8 +27,12 @@ class Program
                     Console.Write("Beskrivning: ");
                     string description = Console.ReadLine();
 
-                    Console.Write("Belopp (positivt = inkomst, negativt = utgift): ");
-                    decimal amount = decimal.Parse(Console.ReadLine());
+                    Console.Write("Belopp (positivt för inkomst, negativt för utgift): ");
+                    decimal amount;
+                    while (!decimal.TryParse(Console.ReadLine(), out amount))
+                    {
+                        Console.Write("Ogiltigt belopp. Försök igen: ");
+                    }
 
                     Console.Write("Kategori: ");
                     string category = Console.ReadLine();
@@ -41,8 +42,6 @@ class Program
 
                     Transaction transaction = new Transaction(description, amount, category, date);
                     manager.AddTransaction(transaction);
-
-                    Console.WriteLine("Transaktion tillagd!");
                     break;
 
                 case "2":
@@ -58,8 +57,15 @@ class Program
 
                 case "4":
                     Console.WriteLine("\n--- Ta bort transaktion ---");
+                    manager.ShowAll();
                     Console.Write("Ange index på transaktionen du vill ta bort: ");
-                    int index = int.Parse(Console.ReadLine());
+
+                    int index;
+                    while (!int.TryParse(Console.ReadLine(), out index))
+                    {
+                        Console.Write("Ogiltigt index. Försök igen: ");
+                    }
+
                     manager.DeleteTransaction(index);
                     break;
 
