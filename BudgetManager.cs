@@ -1,62 +1,64 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 public class BudgetManager
 {
-    // List to store all transactions
     private List<Transaction> transactions = new List<Transaction>();
 
-    // Add new transaction
     public void AddTransaction(Transaction transaction)
     {
         transactions.Add(transaction);
         Console.WriteLine("Transaction added successfully!");
     }
 
-    // Show all transactions
-   public void ShowAll()
-{
-    if (transactions.Count == 0)
+    public void ShowAll()
     {
-        Console.WriteLine("Inga transaktioner ännu.");
-        return;
-    }
-
-    for (int i = 0; i < transactions.Count; i++)
-    {
-        if (transactions[i].Amount >= 0)
+        if (transactions.Count == 0)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-        }
-        else
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Inga transaktioner ännu.");
+            return;
         }
 
-        Console.Write($"{i + 1}. ");
-        transactions[i].ShowInfo();
-        Console.ResetColor();
-    }
-}
+        for (int i = 0; i < transactions.Count; i++)
+        {
+            Console.WriteLine($"\nIndex: {i}");
 
-    // Calculate total balance
+            if (transactions[i].Amount >= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+
+            transactions[i].ShowInfo();
+            Console.ResetColor();
+        }
+    }
+
     public decimal CalculateBalance()
     {
-        return transactions.Sum(t => t.Amount);
+        decimal total = 0;
+
+        foreach (Transaction transaction in transactions)
+        {
+            total += transaction.Amount;
+        }
+
+        return total;
     }
 
-    // Delete transaction by index
     public void DeleteTransaction(int index)
     {
         if (index >= 0 && index < transactions.Count)
         {
             transactions.RemoveAt(index);
-            Console.WriteLine("Transaction removed.");
+            Console.WriteLine("Transaktionen togs bort.");
         }
         else
         {
-            Console.WriteLine("Invalid index.");
+            Console.WriteLine("Ogiltigt index.");
         }
     }
 }
